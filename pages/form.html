@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Learner Account</title>
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(background/pexels-minan1398-1087727.jpg);
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.758);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px 40px;
+            width: 400px;
+            border-radius: 50px;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+        }
+        .container img {
+            height: 30px;
+        }
+        .container h2 {
+            margin: 20px 0;
+            font-size: 24px;
+            color: #333;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            text-decoration: none;
+        }
+        .btn img {
+            height: 20px;
+            margin-right: 10px;
+        }
+        .btn:hover {
+            background-color: #f0f0f0;
+        }
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .divider::before, .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #ddd;
+        }
+        .divider:not(:empty)::before {
+            margin-right: .25em;
+        }
+        .divider:not(:empty)::after {
+            margin-left: .25em;
+        }
+        .terms {
+            font-size: 12px;
+            color: #777;
+        }
+        .terms a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        .terms a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Query for Mobile Devices */
+        @media (max-width: 390px) {
+            .container {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Create a Learner account</h2>
+        <p>One last step before starting your free trial.</p>
+        <a href="#" class="btn">
+            <img src="https://img.icons8.com/ios-filled/50/000000/new-post.png" alt="Email Icon">
+            Sign up with email
+        </a>
+        <a href="#" class="btn">
+            <img src="https://img.icons8.com/ios-filled/50/000000/mac-os.png" alt="Apple Icon">
+            Sign up with Apple
+        </a>
+        <a href="#" class="btn">
+            <img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" alt="Facebook Icon">
+            Sign up with Facebook
+        </a>
+        <a href="#" class="btn">
+            <img src="https://img.icons8.com/ios-filled/50/000000/google-logo.png" alt="Google Icon">
+            Sign up with Google
+        </a>
+        <div class="divider">or</div>
+        <p>Already have a Learner account? <a href="#">Log in</a></p>
+        <p class="terms">By proceeding, you agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></p>
+        <p class="terms">
+            <a href="#">Help</a> | <a href="#">Privacy</a> | <a href="#">Terms</a>
+        </p>
+    </div>
+</body>
+</html>

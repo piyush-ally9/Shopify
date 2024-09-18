@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(background/pexels-minan1398-1087727.jpg);
+  background-size: cover;
+}
+
+.container {
+  width: 800px;
+  margin: 100px auto;
+  background-color: rgba(255, 255, 255, 0.758);
+  padding: 30px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.progress {
+  background-color: #e0e0e0;
+  height: 5px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  background-color: #4caf50;
+  height: 5px;
+  border-radius: 10px;
+  width: 15%;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 16px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.option {
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  animation: fadeIn 1s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.option label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.option input {
+  margin-right: 10px;
+}
+
+.option .icon {
+  font-size: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.button {
+  background-color: #b6d3ca;
+  color: rgba(0, 0, 0, 0.995);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.button:hover {
+  background-color: #a6c2b8;
+  transform: translateY(-5px);
+}
+
+.button.back {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.button.next {
+  background-color: #7a8481;
+  color: #000000;
+}
+
+.button.skip {
+  background-color: #ccc;
+  color: #333;
+}
+
+.button.skip-all {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 390px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+    margin: 20px auto;
+  }
+  .options {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="progress">
+    <div class="progress-bar"></div>
+  </div>
+  <h1 class="title">Where would you like to sell?</h1>
+  <p class="subtitle">Pick as many as you like - you can always change these later. We'll make sure you're set up to sell in these places.</p>
+
+  <div class="options">
+    <div class="option">
+      <label for="online-store">
+        <input type="checkbox" id="online-store">
+        <span class="icon">🏠</span>
+        An online store
+      </label>
+      <p>Create a fully customizable website</p>
+    </div>
+    <div class="option">
+      <label for="in-person">
+        <input type="checkbox" id="in-person">
+        <span class="icon">🏢</span>
+        In person
+      </label>
+      <p>Sell at retail stores, pop-ups, or other physical locations</p>
+    </div>
+    <div class="option">
+      <label for="existing-website">
+        <input type="checkbox" id="existing-website">
+        <span class="icon">📝</span>
+        An existing website or blog
+      </label>
+      <p>Add a Buy Button to your website</p>
+    </div>
+    <div class="option">
+      <label for="social-media">
+        <input type="checkbox" id="social-media">
+        <span class="icon">💬</span>
+        Social media
+      </label>
+      <p>Reach customers on Facebook, Instagram, TikTok, and more</p>
+    </div>
+    <div class="option">
+      <label for="online-marketplaces">
+        <input type="checkbox" id="online-marketplaces">
+        <span class="icon">🛍️</span>
+        Online marketplaces
+      </label>
+      <p>List products on Etsy, Amazon, and more</p>
+    </div>
+    <div class="option">
+      <label for="not-sure">
+        <input type="checkbox" id="not-sure">
+        I'm not sure
+      </label>
+    </div>
+  </div>
+
+  <div class="buttons">
+    <a href="1.html">
+      <button class="button back">Back</button>
+    </a>
+    <a href="form.html">
+      <button class="button skip-all">Skip All</button>
+      <button class="button skip">Skip</button>
+      <button class="button next">Next</button>
+    </a>
+  </div>
+</div>
+</body>
+</html>

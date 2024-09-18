@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url(background/pexels-minan1398-1087727.jpg);
+  background-size: cover;
+  background-color: #266e58;
+  backface-visibility: inherit;
+  color: black;
+  font-family: sans-serif;
+  animation: fadeIn 2.5s; /* add fade-in animation */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  width: 500px;
+  margin: 50px;
+  background-color: rgba(255, 255, 255, 0.758);
+  padding: 30px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-left: 450px;
+  margin-top: 200px;
+}
+
+.progress {
+  background-color: #b89d9d;
+  height: 5px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  background-color: #266e58;
+  height: 5px;
+  border-radius: 10px;
+  width: 5%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+button {
+  background-color: #b6d3ca;
+  color: rgba(0, 0, 0, 0.995);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 45px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.2s, color 0.2s, transform 0.3s, box-shadow 0.3s; /* add transition effect */
+}
+
+button:hover {
+  background-color: #1c5241;
+  color: rgb(37, 32, 32);
+  animation: pulse 1s;
+}
+
+button:active {
+  transform: scale(0.9);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="progress">
+    <div class="progress-bar"></div>
+  </div>
+  <h2>Let's get started. Which of these best describes you?</h2>
+  <p>We'll help you get set up based on your business needs.</p>
+  <div class="option">
+    <input type="radio" name="option" id="option1">
+    <label for="option1">I'm just starting</label>
+  </div>
+  <div class="option">
+    <input type="radio" name="option" id="option2">
+    <label for="option2">I'm already selling online or in person</label>
+  </div>
+  <div style="text-align: right; margin-top: 20px;">
+    <a href="index.html">
+      <button>Back</button>
+    </a>
+    
+    <a href="form.html">
+      <button>Skip All</button>
+    </a>
+    <button id="nextButton" onclick="handleNext()">Next</button>
+  </div>
+</div>
+
+<script>
+function handleNext() {
+  var option1 = document.getElementById('option1');
+  var option2 = document.getElementById('option2');
+  var nextButton = document.getElementById('nextButton');
+  
+  if (option1.checked) {
+    window.location.href = '2.html';
+  } else if (option2.checked) {
+    window.location.href = 'last.html';
+  } else {
+    alert('Please select an option');
+  }
+}
+</script>
+</body>
+</html>
